@@ -6,10 +6,10 @@ MAX_GIF_SIZE = 5000000
 
 print('Initializing Twitter API interface ...')
                                 # Change those with your own API keys and access tokens.
-api = twitter.Api(consumer_key='eMUjteUH7UX3eHUjiiWbwZiR7',
-                  consumer_secret='345j0R4ttwnaGAIjxU8HEKzzPjktmgSuKo089jKDTya6m0AkSh',
-                  access_token_key='845267447863218176-pVoY8addT3m80Ggj3z35aexygvSkIlp',
-                  access_token_secret='n3QqBzGnm5Ef0zZcdRd5iShlQ8CKinRkyKQ3sdTMNFS4u',
+api = twitter.Api(consumer_key='<consumer key>',
+                  consumer_secret='<consumer secret>',
+                  access_token_key='<access key>',
+                  access_token_secret='<access secret>',
                   sleep_on_rate_limit=True)
 print('Done!')
 
