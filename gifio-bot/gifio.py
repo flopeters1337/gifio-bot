@@ -38,6 +38,9 @@ while True:
         print('Processing mention ...')
         tweet = mentions[len(mentions)-1]
         gif_search = tweet.text.replace('@GifioBot', '').strip()
+        mentions_in_tweet = [x.screen_name for x in tweet.user_mentions]
+        for mention in mentions_in_tweet:
+            gif_search = gif_search.replace('@' + mention, '').strip()
         if gif_search == '':
             gif_search = ' '
         extraInfo = ''
@@ -57,7 +60,8 @@ while True:
                 break
             index = index + 1
         print('Sending GIF to tweet ' + str(tweet.id) + ' ...')
-        api.PostUpdate('@' + tweet.user.screen_name + extraInfo, media=gif_url, in_reply_to_status_id=tweet.id)
+        api.PostUpdate('@' + tweet.user.screen_name + extraInfo, 
+                       media=gif_url, in_reply_to_status_id=tweet.id)
         last_processed_mention = tweet.id
         print('Done!')
     else:
