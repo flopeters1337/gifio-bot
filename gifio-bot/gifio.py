@@ -2,6 +2,7 @@ import time
 import random
 import twitter
 import giphypop
+from keys import c_key, c_secret, a_key, a_secret
 
 MAX_GIF_SIZE = 5000000
 
@@ -10,10 +11,10 @@ random.seed()
 
 print('Initializing Twitter API interface ...')
                                 # Change those with your own API keys and access tokens.
-api = twitter.Api(consumer_key='<consumer key>',
-                  consumer_secret='<consumer secret>',
-                  access_token_key='<access token key>',
-                  access_token_secret='<access token secret>',
+api = twitter.Api(consumer_key=c_key,
+                  consumer_secret=c_secret,
+                  access_token_key=a_key,
+                  access_token_secret=a_secret,
                   sleep_on_rate_limit=True)
 print('Done!')
 

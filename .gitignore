@@ -1,3 +1,6 @@
+# Unimportant files
+*.DS_Store
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -87,3 +90,6 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+# Forbid git from sending API keys
+*keys.py
