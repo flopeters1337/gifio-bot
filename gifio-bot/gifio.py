@@ -10,7 +10,6 @@ MAX_GIF_SIZE = 5000000
 random.seed()
 
 print('Initializing Twitter API interface ...')
-                                # Change those with your own API keys and access tokens.
 api = twitter.Api(consumer_key=c_key,
                   consumer_secret=c_secret,
                   access_token_key=a_key,
