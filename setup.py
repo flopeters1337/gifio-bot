@@ -9,7 +9,7 @@ setup(name='gifio-bot',
       license='MIT',
       packages=['gifio-bot'],
       install_requires=[
-          'python-twitter'
+          'python-twitter',
           'giphypop'
       ],
       zip_safe=False)
